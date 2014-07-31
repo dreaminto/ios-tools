@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     
     ChineseIdentity *identity = [ChineseIdentity new];
-    NSString *str= @"21080219790427001x";
+    NSString *str= @"210905197807210546";
     if ([identity check:str]) {
         NSLog(@"ok");
     }

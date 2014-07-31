@@ -150,7 +150,15 @@
     }
     int y = s % 11;
     NSString *verifyChar = [_verifyCode objectForKey:[NSNumber numberWithInt:y]];
-    if ([verifyChar isEqual:[[str substringFromIndex:17] uppercaseString]]) return YES;
+    if ( [verifyChar isEqualToString:@"X"] ) {
+        if ([verifyChar isEqual:[[str substringFromIndex:17] uppercaseString]]) return YES;
+        else return NO;
+    }
+    else {
+        if ([verifyChar isEqual:[str substringFromIndex:17]]) return YES;
+        else return NO;
+
+    }
 
     return NO;
 
